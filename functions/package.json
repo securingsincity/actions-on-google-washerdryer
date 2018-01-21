@@ -1,0 +1,20 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix \"**/*.js\"",
+    "start": "firebase serve --only functions",
+    "deploy": "firebase deploy --only functions",
+    "test": "npm run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "actions-on-google": "^1.7.0",
+    "axios": "^0.17.1",
+    "firebase-admin": "^5.8.0",
+    "firebase-functions": "^0.8.0"
+  }
+}
