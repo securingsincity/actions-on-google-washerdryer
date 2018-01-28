@@ -7,10 +7,27 @@
         "conversationName": "myDryerApp"
       },
       "intent": {
-        "name": "actions.intent.MAIN",
+        "name": "actions.intent.MAIN"
+      }
+    },
+    {
+      "description": "",
+      "name": "ASK",
+      "fulfillment": {
+        "conversationName": "myDryerApp"
+      },
+      "intent": {
+        "name": "com.jameshrisho.MyDryerApp.ASK",
         "trigger": {
           "queryPatterns": [
-            "talk to my dryer"
+            "how you doing?",
+            "what is up?",
+            "what's up?",
+            "are you running?",
+            "ask how you doing?",
+            "ask what is up?",
+            "ask what's up?",
+            "ask are you running?"
           ]
         }
       }

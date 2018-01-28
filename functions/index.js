@@ -29,12 +29,11 @@ exports.sayDryer = functions.https.onRequest((request, response) => {
       case app.StandardIntents.MAIN:
         app.ask('Welcome! ask me about that dryer of yours.');
         break;
-
-      case app.StandardIntents.TEXT:
+      default:
         instance.request(requestConfig)
           .then((resp) => {
             const isVibrating = resp.data.isVibrating
-            const text = isVibrating ? "I'm shakin' baby" : "I'm not running at all"
+            const text = isVibrating ? "I'm shaking baby" : "I'm not running at all"
             app.tell(text);
           })
           .catch((err) => {
@@ -42,9 +41,6 @@ exports.sayDryer = functions.https.onRequest((request, response) => {
             app.tell('oh no there was an error')
           })
 
-        break;
-      default:
-        app.tell("whatever dude")
         break;
     }
   }
